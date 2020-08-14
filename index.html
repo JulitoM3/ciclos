@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Inicio</title>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <div v-if="!ready">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h1>Bucles en lenguaje C</h1>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Las estructuras repetitivas se utilizan cuando se quiere que un conjunto de instrucciones
+                        se ejecuten un cierto número finito de veces, por ejemplo, escribir algo en pantalla cierta
+                        cantidad de veces.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <span>Entrada</span>
+                    <pre class="rounded">
+                    #include {{ stdio }}
+                    #include {{ stdlib }}
+                    int main (){
+                        printf("Hola {{ nombre }}\n");
+                        printf("Hola {{ nombre }}\n");
+                        printf("Hola {{ nombre }}\n");
+                        return 0;
+                    }
+                </pre>
+                </div>
+                <div class="col-md-6">
+                    <span>Salida</span>
+                    <pre class="rounded">
+                    Hola Juan
+                    Hola Juan
+                    Hola Juan
+                </pre>
+                </div>
+            </div>
+            <br>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2>Ciclo for</h2>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12 ">
+                    <p>
+                        La instrucción for explota la capacidad del ordenador para repetir procesos y para contar.
+                        Muchas veces esta instrucción se puede reemplazar por otras instrucciones o estructuras de
+                        tipo repetición.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <span>Entrada</span>
+                    <pre class="rounded">
+                    #include {{ stdio }}
+                    #include {{ stdlib }}
+                    int main(){
+                        int i; 
+                        <strong>for(i = 0; i < 2 ; i++){</strong>
+                            printf("Hola {{ nombre }}\n")
+                            <strong>}</strong>
+                            return 0;
+                        }
+                </pre>
+                </div>
+                <div class="col-md-6">
+                    <span class="rounded">Salida</span>
+                    <pre>
+                    Hola Juan
+                    Hola Juan
+                    Hola Juan
+                </pre>
+                </div>
+            </div>
+            <br>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2>Ciclo while</h2>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        La instrucción while es una de las alternativas para la repetición de procesos en programación.
+                        <br>
+                        Como veremos, guarda cierta similitud con la instrucción for, hasta el punto de que en algunas
+                        ocasiones
+                        podrá optarse por el uso de una u otra de forma indistinta.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <span>Entrada</span>
+                    <pre class="rounded">
+                    #include {{ stdio }} 
+                    #include {{ stdlib }}
+                    int main() {
+                            int i=0; 
+                            while (i < 2) {
+                                printf("Hola {{ nombre }}\n");
+                                i=i+1;
+                            }
+                            return 0;
+                        }
+                    </pre>
+                </div>
+                <div class="col-md-6">
+                    <span>Salida</span>
+                    <pre class="rounded">
+                        Hola Juan
+                    Hola Juan
+                    Hola Juan
+                </pre>
+                </div>
+            </div>
+            <br>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2>Ciclo do-while</h2>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        La instrucción do-while es guarda cierta similitud con la instrucción while con la diferencia
+                        que <strong>realiza la comparación posterior a ejecutar las instrucciones asignadas.</strong>
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <span>Entrada</span>
+                    <pre class="rounded">
+                    #include {{ stdio }} 
+                    #include {{ stdlib }}
+                        int main() {
+                            int i=0; 
+                            do{
+                                printf("Hola {{ nombre }}\n");
+                                i=i+1;
+                            }while (i < 2);
+                            return 0;
+                        }
+                    </pre>
+                </div>
+                <div class="col-md-6">
+                    <span>Salida</span>
+                    <pre class="rounded">
+                    Hola Juan
+                    Hola Juan
+                    Hola Juan
+                </pre>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div v-if="!ready">
+            <span>
+                ¿Listo para el cuestionario?
+            </span>
+            <button class="btn btn-info" v-on:click="setReady">
+                SÍ
+            </button>
+            <button class="btn btn-danger" v-on:click="top">
+                NO
+            </button>
+        </div>
+        <br><br>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>
